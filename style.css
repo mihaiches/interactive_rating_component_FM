@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+    --main-color: hsl(25, 97%, 53%);
+    --neutral-white:hsl(0, 0%, 100%);
+    --neutral-light-grey: hsl(217, 12%, 63%);
+    --neutral-medium-grey: hsl(216, 12%, 54%);
+    --neutral-dark-blueish: rgba(53, 65, 80, 0.3);
+    --neutral-dark-blue: hsl(213, 19%, 18%);
+    --neutral-very-dark-blue: hsl(216, 12%, 8%);
+
+    --main-f-size: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Desktop: 1440px */
+
+body {
+    height: 100vh;
+    min-height: 750px;
+    margin: 0 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--neutral-very-dark-blue);
+    font-family: 'Overpass', sans-serif;
+}
+
+/* START OF RATING CARD */
+.main {
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+
+    background-color: var(--neutral-dark-blue);
+    background: radial-gradient(circle at top, 
+    hsl(213, 30%, 18%) 0%, 
+    hsl(213, 19%, 18%) 100%);
+    border-radius: 20px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    margin-bottom: 30px;
+    
+    background-color: var(--neutral-dark-blueish);
+    border-radius: 50px;
+}
+
+.title {
+    margin-bottom: 15px;
+    color: var(--neutral-white);
+    font-size: 36px;
+    font-weight: 700;
+}
+.cover-text {
+    margin-bottom: 25px;
+    color: var(--neutral-light-grey);
+    font-size: var(--main-f-size);
+    line-height: 25px;
+}
+
+.rating-container {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.rating {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--neutral-dark-blueish);
+    border-radius: 25px;
+    color: var(--neutral-light-grey);
+    cursor: pointer;
+    font-size: var(--main-f-size);
+    list-style: none;
+}
+.rating:hover{
+    background-color: var(--main-color);
+    color: var(--neutral-white)
+}
+
+.active{
+    background-color: var(--neutral-medium-grey);
+    color: var(--neutral-white);
+}
+
+#submit {
+    width: 100%;
+    height: 40px;
+
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 25px;
+    color: var(--neutral-white);
+    font-size: var(--main-f-size);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#submit:hover {
+    background-color: var(--neutral-white);
+    color: var(--main-color);
+    cursor: pointer;
+}
+/* END OF RATING CARD */
+
+/* START OF THANK YOU NOTE - WHERE YOU CAN SEE THE RATE GIVEN BY A USER */
+.thank-note{
+    text-align: center;
+}
+
+.rate {
+    margin: 20px auto;
+    padding: 10px 20px;
+    display: inline-block;
+
+    background-color: var(--neutral-dark-blueish);
+    border-radius: 25px;
+    color:var(--main-color);
+    font-size: var(--main-f-size);
+}
+
+.thank-title {
+    margin-bottom: 10px;
+    color: var(--neutral-white);
+}
+
+.thank-text {
+    color: var(--neutral-light-grey);
+    font-size: var(--main-f-size);
+    line-height: 25px;
+}
+
+.attribution {
+    display: none;
+    font-size: 11px;
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+.hidden {
+    display: none;
+}
+
+/* Mobile: 375px */
+@media only screen and (max-width: 375px){
+    /* RATING CARD START */
+    .main {
+        width: 350px;
+        height: 350px;
+    }
+    .icon {
+        margin-bottom: 15px;
+    }
+    .title {
+        margin-bottom: 15px;
+        font-size: 26px;
+    }
+    .cover-text {
+        margin-bottom: 25px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .rating-container {
+        margin-bottom: 25px;
+    }
+    /* RATING CARD END */
+
+    /* THANKS NOTE START */
+    .thanks-icon{
+        width: 130px;
+    }
+    .thank-title {
+        font-size: 26px;
+    }
+
+}
